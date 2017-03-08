@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="generator" content="pandoc">
+  <meta name="author" content="Jamie Quinn">
+  <title>Anisotropic Viscosity and Astrophysical Applications</title>
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+  <link rel="stylesheet" href="reveal.js/css/reveal.css">
+  <style type="text/css">code{white-space: pre;}</style>
+  <link rel="stylesheet" href="reveal.js/css/theme/solarized.css" id="theme">
+  <link rel="stylesheet" href="changes.css"/>
+  <!-- Printing and PDF exports -->
+  <script>
+    var link = document.createElement( 'link' );
+    link.rel = 'stylesheet';
+    link.type = 'text/css';
+    link.href = window.location.search.match( /print-pdf/gi ) ? 'reveal.js/css/print/pdf.css' : 'reveal.js/css/print/paper.css';
+    document.getElementsByTagName( 'head' )[0].appendChild( link );
+  </script>
+  <!--[if lt IE 9]>
+  <script src="reveal.js/lib/js/html5shiv.js"></script>
+  <![endif]-->
+</head>
+<body>
+  <div class="reveal">
+    <div class="slides">
+
+<section>
+  <h1 class="title">Anisotropic Viscosity and Astrophysical Applications</h1>
+  <p class="author">Jamie Quinn</p>
+  <p class="date">Supervisor: David MacTaggart</p>
+</section>
+
+<section id="mhd" class="slide level2">
+<h2>MHD</h2>
+<ul>
+<li class="fragment">Momentum Equation (<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mfrac><mrow><mi>D</mi><mover><mi>u</mi><mo accent="true">⃗</mo></mover></mrow><mrow><mi>D</mi><mi>t</mi></mrow></mfrac><mo>=</mo><mi>⋯</mi></mrow><annotation encoding="application/x-tex">\frac{D\vec{u}}{Dt} = \cdots</annotation></semantics></math>)</li>
+<li class="fragment">Energy Equation (<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mfrac><mrow><mi>D</mi><mi>E</mi></mrow><mrow><mi>D</mi><mi>t</mi></mrow></mfrac><mo>=</mo><mi>⋯</mi></mrow><annotation encoding="application/x-tex">\frac{DE}{Dt} = \cdots</annotation></semantics></math>)</li>
+<li class="fragment">Induction Equation (<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mfrac><mrow><mi>D</mi><mover><mi>B</mi><mo accent="true">⃗</mo></mover></mrow><mrow><mi>D</mi><mi>t</mi></mrow></mfrac><mo>=</mo><mi>⋯</mi></mrow><annotation encoding="application/x-tex">\frac{D\vec{B}}{Dt} = \cdots</annotation></semantics></math>)</li>
+</ul>
+</section>
+<section id="viscosity" class="slide level2">
+<h2>Viscosity</h2>
+<ul>
+<li class="fragment">Measure of internal friction (molecular interactions)</li>
+<li class="fragment">Produces momentum dissipation</li>
+<li class="fragment">Produces internal heating</li>
+</ul>
+</section>
+<section class="slide level2">
+
+<figure>
+<img src="fluid_in_pipe_iso_visc.png" />
+</figure>
+<p>Layers of fluid dragged by friction and momentum transported upwards</p>
+</section>
+<section id="viscosity-stress-tensor" class="slide level2">
+<h2>Viscosity Stress Tensor</h2>
+<p>Viscous stress directly proportional to rate of strain.</p>
+<p><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mstyle mathvariant="bold"><mi>𝛔</mi></mstyle><mo>=</mo><mi>ν</mi><mstyle mathvariant="bold"><mi>𝛆</mi></mstyle></mrow><annotation encoding="application/x-tex">{\mathbf{\sigma}} = \nu{\mathbf{\varepsilon}}</annotation></semantics></math></p>
+<p><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mstyle mathvariant="bold"><mi>𝛆</mi></mstyle><mo>=</mo><mfrac><mn>1</mn><mn>2</mn></mfrac><mrow><mo stretchy="true" form="prefix">(</mo><mi>∇</mi><mover><mi>u</mi><mo accent="true">⃗</mo></mover><mo>+</mo><mi>∇</mi><msup><mover><mi>u</mi><mo accent="true">⃗</mo></mover><mi>T</mi></msup><mo stretchy="true" form="postfix">)</mo></mrow></mrow><annotation encoding="application/x-tex">{\mathbf{\varepsilon}} = \frac{1}{2}\left(\nabla\vec{u} + \nabla\vec{u}^T \right)</annotation></semantics></math></p>
+<div class="fragment">
+<p>However magnetic field changes nature of small scale frictional interactions</p>
+</div>
+<div class="fragment">
+<p>Momentum transported better along magnetic field lines than perpendicularly</p>
+</div>
+</section>
+<section id="braginskii-viscosity" class="slide level2">
+<h2>Braginskii Viscosity</h2>
+<p>Kinetic theory -&gt; two fluid model -&gt; one fluid model</p>
+<div class="fragment">
+<p><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mtable><mtr><mtd columnalign="right"><mstyle mathvariant="bold"><mi>𝛔</mi></mstyle><mo>=</mo></mtd><mtd columnalign="left"><mi>a</mi><mo stretchy="false" form="prefix">(</mo><mstyle mathvariant="bold"><mi>𝐖</mi></mstyle><mover><mi>B</mi><mo accent="true">⃗</mo></mover><mo>⋅</mo><mover><mi>B</mi><mo accent="true">⃗</mo></mover><mo stretchy="false" form="postfix">)</mo><mo stretchy="false" form="prefix">(</mo><mover><mi>B</mi><mo accent="true">⃗</mo></mover><mo>⊗</mo><mover><mi>B</mi><mo accent="true">⃗</mo></mover><mo stretchy="false" form="postfix">)</mo></mtd></mtr><mtr><mtd columnalign="right"></mtd><mtd columnalign="left"><mo>+</mo><mi>b</mi><mo stretchy="false" form="prefix">(</mo><mstyle mathvariant="bold"><mi>𝐖</mi></mstyle><mover><mi>B</mi><mo accent="true">⃗</mo></mover><mo>⋅</mo><mover><mi>B</mi><mo accent="true">⃗</mo></mover><mo stretchy="false" form="postfix">)</mo><mi>I</mi></mtd></mtr><mtr><mtd columnalign="right"></mtd><mtd columnalign="left"><mo>+</mo><mi>c</mi><mo stretchy="false" form="prefix">(</mo><mstyle mathvariant="bold"><mi>𝐖</mi></mstyle><mo stretchy="false" form="prefix">(</mo><mover><mi>B</mi><mo accent="true">⃗</mo></mover><mo>⊗</mo><mover><mi>B</mi><mo accent="true">⃗</mo></mover><mo stretchy="false" form="postfix">)</mo><mo>+</mo><mo stretchy="false" form="prefix">(</mo><mover><mi>B</mi><mo accent="true">⃗</mo></mover><mo>⊗</mo><mover><mi>B</mi><mo accent="true">⃗</mo></mover><mo stretchy="false" form="postfix">)</mo><mstyle mathvariant="bold"><mi>𝐖</mi></mstyle><mo stretchy="false" form="postfix">)</mo></mtd></mtr><mtr><mtd columnalign="right"></mtd><mtd columnalign="left"><mo>+</mo><mi>d</mi><mstyle mathvariant="bold"><mi>𝐖</mi></mstyle></mtd></mtr></mtable><annotation encoding="application/x-tex">\begin{align} {\mathbf{\sigma}} = &amp;a({\mathbf{W}}\vec{B}\cdot \vec{B})(\vec{B}\otimes\vec{B}) \\  &amp;+ b({\mathbf{W}}\vec{B}\cdot\vec{B})I \\  &amp;+ c({\mathbf{W}}(\vec{B}\otimes\vec{B}) + (\vec{B}\otimes\vec{B}){\mathbf{W}}) \\  &amp;+ d{\mathbf{W}} \end{align}</annotation></semantics></math></p>
+<p><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mstyle mathvariant="bold"><mi>𝐖</mi></mstyle><annotation encoding="application/x-tex">{\mathbf{W}}</annotation></semantics></math> analagous to strain rate tensor, only depends on flow velocity</p>
+</div>
+</section>
+<section class="slide level2">
+
+<p>In absence of magnetic field, this reduces to isotropic viscosity!</p>
+<p><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mstyle mathvariant="bold"><mi>𝛔</mi></mstyle><mo>=</mo><mi>d</mi><mstyle mathvariant="bold"><mi>𝐖</mi></mstyle><mo>≡</mo><mi>ν</mi><mstyle mathvariant="bold"><mi>𝛆</mi></mstyle></mrow><annotation encoding="application/x-tex">{\mathbf{\sigma}} = d{\mathbf{W}} \equiv \nu{\mathbf{\varepsilon}}</annotation></semantics></math></p>
+<div class="fragment">
+<p>However, in corona, low resolution of null points causes anisotropy to bleed into isotropic areas</p>
+</div>
+</section>
+<section id="parallel-isotropic-switch" class="slide level2">
+<h2>Parallel-Isotropic Switch</h2>
+<ul>
+<li class="fragment">Borrow anisotropic ideas from liquid crystals</li>
+<li class="fragment">Disregard perpendicular components of viscosity</li>
+<li class="fragment">Derive parameter that &quot;switches on&quot; parallel anisotropy in strong magnetic field</li>
+</ul>
+</section>
+<section class="slide level2">
+
+<figure>
+<img src="s_plot.png" />
+</figure>
+</section>
+<section id="work-so-far" class="slide level2">
+<h2>Work So Far</h2>
+<p>1D Euler equation solver using LAgrangian-REmap scheme</p>
+<ul>
+<li class="fragment">Lagrangian step solves equations in Lagrangian form, deforming grid</li>
+<li class="fragment">Remap step maps variables back to Eulerian grid</li>
+</ul>
+</section>
+<section class="slide level2">
+
+<figure>
+<img src="eulerian_grid.png" />
+</figure>
+</section>
+<section class="slide level2">
+
+<figure>
+<img src="lare1d_0.png" id="id" class="class" height="500" />
+</figure>
+<p>Initial conditions</p>
+</section>
+<section class="slide level2">
+
+<figure>
+<img src="lare1d_350.png" id="id" class="class" height="500" />
+</figure>
+<p>After 350 timesteps (analytic solution in green)</p>
+</section>
+<section class="slide level2">
+
+<p>Isotropic heating in null point situation using full lare3d code</p>
+</section>
+<section class="slide level2">
+
+<figure>
+<img src="visit0003.png" id="id" class="class" height="600" />
+</figure>
+</section>
+<section class="slide level2">
+
+<figure>
+<img src="visit0002.png" id="id" class="class" height="600" />
+</figure>
+</section>
+<section class="slide level2">
+
+<figure>
+<img src="visit0000.png" id="id" class="class" height="600" />
+</figure>
+</section>
+<section id="next-steps" class="slide level2">
+<h2>Next Steps</h2>
+<ul>
+<li class="fragment">Introduce anisotropic models</li>
+<li class="fragment">Achieve higher resolution runs</li>
+<li class="fragment">Apply to different solar phenomena</li>
+</ul>
+</section>
+    </div>
+  </div>
+
+  <script src="reveal.js/lib/js/head.min.js"></script>
+  <script src="reveal.js/js/reveal.js"></script>
+
+  <script>
+
+      // Full list of configuration options available at:
+      // https://github.com/hakimel/reveal.js#configuration
+      Reveal.initialize({
+        // Transition style
+        transition: 'none', // none/fade/slide/convex/concave/zoom
+
+        // Optional reveal.js plugins
+        dependencies: [
+          { src: 'reveal.js/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+          { src: 'reveal.js/plugin/zoom-js/zoom.js', async: true },
+              { src: 'reveal.js/plugin/notes/notes.js', async: true }
+        ]
+      });
+    </script>
+    </body>
+</html>
